@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Zoey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+SC:wght@300;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #2a0808;
+        font-family: 'Noto Serif SC', serif;
+      }
+      .font-script {
+        font-family: 'Great Vibes', cursive;
+      }
+      .font-serif-display {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Custom scrollbar hide */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      @keyframes floatUp {
+        0% { transform: translateY(110vh) scale(0.8); opacity: 0; }
+        20% { opacity: 0.8; }
+        100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+      }
+
+      .lantern {
+        position: absolute;
+        animation: floatUp 15s linear infinite;
+        opacity: 0.8;
+      }
+      
+      /* Envelope Animations */
+      .envelope-wrapper {
+        perspective: 1000px;
+      }
+      .envelope-flap {
+        transform-origin: top;
+        transition: transform 0.6s ease-in-out, z-index 0.6s;
+      }
+      .envelope.open .envelope-flap {
+        transform: rotateX(180deg);
+        z-index: 0;
+      }
+      .envelope-card {
+        transition: transform 0.8s ease-in-out;
+      }
+      .envelope.open .envelope-card {
+        transform: translateY(-120px);
+        z-index: 20;
+      }
+
+      /* Hover Wobble Effect */
+      @keyframes wobble {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(-2deg); }
+        50% { transform: rotate(2deg); }
+        75% { transform: rotate(-1deg); }
+        100% { transform: rotate(0deg); }
+      }
+      .hover-wobble:hover {
+        animation: wobble 0.6s ease-in-out;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-0JpLGFuv.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
